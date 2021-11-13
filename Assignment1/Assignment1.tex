@@ -182,9 +182,13 @@ Find the distance between the following pairs of points
 &=\norm{\myvec{am_1^2\\2am_1}-\myvec{am_2^2\\2am_2}}
 \end{align}
 \begin{align}
-&=\norm{\myvec{am_1^2-am_2^2\\2am_1-2am_2}}
-\\&=\sqrt{\myvec{am_1^2-am_2^2 & 2am_1-2am_2}^
+&=\norm{\myvec{am_1^2-am_2^2\\2am_1-2am_2}}\end{align}
+\begin{align}
+&=\sqrt{\myvec{am_1^2-am_2^2\\2am_1-2am_2}^
 \intercal\myvec{am_1^2-am_2^2\\2am_1-2am_2}}
+\end{align}
+\begin{align}
+&=\sqrt{\myvec{am_1^2-am_2^2 & 2am_1-2am_2}\myvec{am_1^2-am_2^2\\2am_1-2am_2}}
 \end{align}
 \begin{align}
 &=\sqrt{\myvec{am_1^2-am_2^2}^2+\myvec{2am_1-2am_2}^2}\label{eq2}
