@@ -15,8 +15,8 @@ def line_gen(A,B):
 m=-4
 n=3
 
-A =np.array([1,3])
-B =np.array([2,7])
+B =np.array([1,3])
+A =np.array([2,7])
 
 I=((m*B)+(n*A))/(m+n)
 E=((m*B)-(n*A))/(m+n)
@@ -29,15 +29,16 @@ plt.plot(x_AB[0,:],x_AB[1,:],label='$AB$')
 plt.plot(A[0], A[1], 'o')
 plt.text(A[0] * (1 + 0.1), A[1] * (1 - 0.1) , 'A')
 plt.plot(B[0], B[1], 'o')
-plt.text(B[0] * (1-0.3), B[1] * (1-0.1) , 'B')
+plt.text(B[0] * (1 - 0.4), B[1] * (1 - 0.5) , 'B')
 plt.plot(I[0], I[1], 'o')
-plt.text(I[0] * (1-0.3), I[1] * (1-0.1) , 'Internal')
+plt.text(I[0] * (1-0.1), I[1] * (1-0.25) , 'I')
 plt.plot(E[0], E[1], 'o')
-plt.text(E[0] * (1-0.3), E[1] * (1-0.1) , 'External')
-
+plt.text(E[0] * (1-0.05), E[1] * (1-0.05) , 'E')
+print(I)
+print(E)
 plt.xlabel('$x$')
 plt.ylabel('$y$')
 plt.legend(loc='best')
 plt.grid() # minor
-#plt.axis('equal')
+# plt.axis('equal')
 plt.show()
