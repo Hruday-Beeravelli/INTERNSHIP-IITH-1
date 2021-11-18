@@ -39,5 +39,5 @@ plt.xlabel('$x$')
 plt.ylabel('$y$')
 plt.legend(loc='best')
 plt.grid() # minor
-plt.axis('equal')
+#plt.axis('equal')
 plt.show()
