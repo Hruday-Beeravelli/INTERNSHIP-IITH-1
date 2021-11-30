@@ -162,9 +162,10 @@ https://github.com/Hruday-Beeravelli/INTERNSHIP-IITH-1/blob/main/Assignment4/A4.
 Prove(by shewing that the area of the triangle formed by them  is zero) that the following sets of three points are in a straight line $(-\frac{1}{2},3), (-5,6)$ and $(-8,8)$
 \end{enumerate}
 \subsection{Solution}
+Rank of matrix method: 
+\\If rank of matrix is not full matrix after row reduction, then points are said to be collinear
 \begin{align}
-& \frac{1}{2}\mydet{\myvec{\vec{A}-\vec{B}}&\myvec{\vec{A}-\vec{C}}}
-\label{eq5}
+\myvec{\myvec{\vec{A}-\vec{B}&\vec{A}-\vec{C}}^\top} \label{eq1}
 \end{align}
 Let $\vec{A}=\myvec{-\frac{1}{2}\\3}, \vec{B}=\myvec{-5\\6}, \vec{C}=\myvec{-8\\8}$
 \begin{align}
@@ -173,16 +174,19 @@ Let $\vec{A}=\myvec{-\frac{1}{2}\\3}, \vec{B}=\myvec{-5\\6}, \vec{C}=\myvec{-8\\
 \vec{A}-\vec{C}&=\myvec{-\frac{1}{2}\\3}-\myvec{-8\\8}\\
 &=\myvec{\frac{15}{2}\\-5}
 \end{align}
-From \eqref{eq5}
-\item Area of the triangle
+From \eqref{eq1}
+\\Let 
 \begin{align}
-&=\frac{1}{2}\mydet{\frac{9}{2}&\frac{15}{2}\\-3&-5}\\
-&=\frac{1}{2}\left[\myvec{\frac{9}{2}\times-5}-\myvec{\frac{15}{2}\times-3}\right]\\
-&=\frac{1}{2}\myvec{-\frac{45}{2}+\frac{45}{2}}\\
-&=\frac{1}{2}\myvec{0}\\
-&=0\nonumber
+\vec{M}&=\myvec{\frac{9}{2}&\frac{15}{2}\\-3&-5}^\top
+\\&=\myvec{\frac{9}{2}&-3\\\frac{15}{2}&-5}\\
 \end{align}
-Since the area is $0$, the given points form a straight line.
+Row Reduction on $\vec{M}$ 
+\begin{align}
+R_2 \leftrightarrows R_2 - \frac{5}{3}\times R_1 \nonumber
+\\\vec{M} & =\myvec{\frac{9}{2}&-3\\0&0}\\
+\end{align}
+Since the rank of matrix $\vec{M}$ is 1, which is not full rank, 
+\\therefore the given points are collinear.
 \begin{figure}[!ht]
 \includegraphics[width=\columnwidth]{download.png}
 \caption{}
