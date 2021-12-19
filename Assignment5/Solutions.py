@@ -1,6 +1,9 @@
 ### CBSE 10th class 2013 Question paper
 
 # Question 7
+### CBSE 10th class 2013 Question paper
+
+# Question 7
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -23,20 +26,14 @@ import shlex
 
 
 # given triangle vertices
-A=[5,2]
-B=[-9,-3]
-C=[-3,-5]
-
-area=(5*(-3+5)-9*(-5-2)-3*(2+3))/2
-print("since area of the triangle is :", abs(area)," answer is option (C)")
 
 #Triangle vertices
 A = np.array([1,3]) 
 B = np.array([-1,0]) 
 C = np.array([4,0]) 
 
-Ar = np.linalg.det([A-B,A-C])
-print(Ar/2)
+Ar = np.linalg.det([A-B,A-C])/2
+# print(Ar)
 
 #Generating all lines
 x_AB = line_gen(A,B)
@@ -62,5 +59,4 @@ plt.grid() # minor
 plt.axis('equal')
 
 plt.show()
-
-
+print("since area of the triangle is :", abs(Ar)," answer is option (C)")
